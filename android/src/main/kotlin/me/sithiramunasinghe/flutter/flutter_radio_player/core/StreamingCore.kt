@@ -59,7 +59,7 @@ class StreamingCore : Service(), AudioManager.OnAudioFocusChangeListener {
     private val handler = Handler();
 
     private var audioManager: AudioManager? = null
-    private var focusRequest: AudioFocusRequest? = null
+    private var focusRequest: AudioFocusRequest = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
     private var player: SimpleExoPlayer? = null
     private var mediaSessionConnector: MediaSessionConnector? = null
     private var mediaSession: MediaSession? = null
